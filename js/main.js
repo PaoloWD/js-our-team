@@ -1,6 +1,7 @@
-let containerEl = document.querySelector(".justify-content-between");
+const containerEl = document.querySelector(".justify-content-between");
 
-const team = [
+const btnEl = document.querySelector(".btn");
+let team = [
   {
     name: "Wayne",
     surname: "Barnett",
@@ -63,3 +64,16 @@ function createDiv() {
     mainDiv.append(imgEl);
   }
 }
+
+btnEl.addEventListener("click", function () {
+  const firstNameEl = document.querySelector('[aria-label="First-name"]');
+  const lastNameEl = document.querySelector('[aria-label="Last-name"]');
+  const roleEl = document.querySelector('[aria-label="role"]');
+  const newUser = {
+    name: firstNameEl.value,
+    surname: lastNameEl.value,
+    role: roleEl.value,
+  };
+  team.push(newUser);
+  console.log(team);
+});
