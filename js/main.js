@@ -47,20 +47,18 @@ function createDiv() {
     const info = team[i];
     console.log(info);
     const mainDiv = document.createElement("div");
-    const nameEl = document.createElement("span");
+    const nameEl = document.createElement("div");
+    nameEl.classList.add("text-center");
+    nameEl.innerHTML = `${info.name} ${info.surname}`;
 
-    nameEl.innerHTML = info.name;
-
-    const surnameEl = document.createElement("span");
-    surnameEl.innerHTML = info.surname;
     const roleEl = document.createElement("div");
+    roleEl.classList.add("text-center");
     roleEl.innerHTML = info.role;
     const imgEl = document.createElement("img");
     imgEl.src = info.img;
     imgEl.innerHTML = info.img;
     containerEl.append(mainDiv);
     mainDiv.append(nameEl);
-    mainDiv.append(surnameEl);
     mainDiv.append(roleEl);
     mainDiv.append(imgEl);
   }
