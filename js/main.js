@@ -48,11 +48,11 @@ function createDiv() {
     console.log(info);
     const mainDiv = document.createElement("div");
     const nameEl = document.createElement("div");
-    nameEl.classList.add("text-center");
+    mainDiv.classList.add("text-center");
     nameEl.innerHTML = `${info.name} ${info.surname}`;
 
     const roleEl = document.createElement("div");
-    roleEl.classList.add("text-center");
+
     roleEl.innerHTML = info.role;
     const imgEl = document.createElement("img");
     imgEl.src = info.img;
