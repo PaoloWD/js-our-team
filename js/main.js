@@ -44,16 +44,16 @@ createDiv();
 
 function createDiv() {
   for (let i = 0; i < team.length; i++) {
-    let info = team[i];
+    const info = team[i];
     console.log(info);
-    let nameEl = document.createElement("div");
+    const nameEl = document.createElement("div");
     nameEl.innerHTML = info.name;
 
-    let surnameEl = document.createElement("div");
+    const surnameEl = document.createElement("div");
     surnameEl.innerHTML = info.surname;
-    let roleEl = document.createElement("div");
+    const roleEl = document.createElement("div");
     roleEl.innerHTML = info.role;
-    let imgEl = document.createElement("div");
+    const imgEl = document.createElement("img");
     imgEl.innerHTML = info.img;
     containerEl.append(nameEl);
     containerEl.append(surnameEl);
